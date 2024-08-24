@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decodificador</title>
+    <link href="styles/styles.css" rel="stylesheet" />
+</head>
+<body>
+    <header class="cabecalho">
+        <img class="cabecalho__logo" src="assets/Vector.png">
+    </header>
+    <main class="principal">
+        <section class="sessao">   
+        <textarea class="text-area"  placeholder="Digite seu texto" cols="41" rows="4" ></textarea>
+
+            
+  
+        <div class="sessao__botao">
+            <h6 >Apenas letras minúsculas e sem acento.</h6>
+            <button class="sessao__botao__botoes" onclick="btnEncriptar()" >Criptografar</button>
+            <button class="sessao__botao__botoes" onclick="btnDescriptografar()">Descriptografar</button>
+        </div>
+        </section>
+        <section class="sessao__resposta">            
+                
+                   <textarea readonly class="mensagem" cols="30" rows="18" ></textarea>
+                    <h1 class="texto">Nenhuma mensagem encontrada</h1>
+                    <p class="textoP">Digite um texto que você deseja criptografar ou descriptografar.</p>
+                    
+
+        </section>
+    </main>
+    <footer></footer>
+    <script src="app.js"></script>    
+</body>
+
+</html>
