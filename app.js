@@ -30,12 +30,16 @@ function encriptar(mensagemEncriptada){
     mensagemEncriptada = mensagemEncriptada.toLowerCase();
 
     const regexacentos = /[àáâãäåæçèéêëìíîïñòóôõöøùúûüýÿ]/i;
+    const regexCaracteresEspeciais = /[^a-z0-9 ]/i;
 
     if (regexacentos.test(mensagemEncriptada)) {
         alert("Somente caracteres sem acento");
         return ""; 
     }  
-
+     if (regexCaracteresEspeciais.test(mensagemEncriptada)) {
+        alert("Somente letras são permitidas");
+        return "";
+    }
     for(let i=0 ;i < cifraMatriz.length;i++){
         if (mensagemEncriptada.includes(cifraMatriz[i][0]))
             {
@@ -75,10 +79,15 @@ function descriptografar(mensagemDescriptada){
     
 
     const regexacentos = /[àáâãäåæçèéêëìíîïñòóôõöøùúûüýÿ]/i;
-        
+    const regexCaracteresEspeciais = /[^a-z0-9 ]/i;
+    
     if (regexacentos.test(mensagemDescriptada)) {
         alert("Somente caracteres sem acento");
         return ""; 
+    }
+    if (regexCaracteresEspeciais.test(mensagemDescriptada)) {
+        alert("Somente letras são aceitas");
+        return "";
     }
 
     for(let i=0 ;i < cifraMatriz.length;i++){
